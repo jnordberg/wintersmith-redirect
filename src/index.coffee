@@ -17,7 +17,7 @@ module.exports = (env, callback) ->
   tree = {redirects: {}}
   for filename, redirect of env.config.redirects or {}
     tree.redirects[filename] = new Redirect filename, redirect
-    console.log filename, redirect
+    env.logger.info "Redirecting #{ filename } to #{ redirect }"
 
   env.registerGenerator 'redirects', (contents, callback) ->
     callback null, tree
