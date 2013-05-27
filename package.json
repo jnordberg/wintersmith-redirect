@@ -1,6 +1,6 @@
 {
   "name": "wintersmith-redirect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wintersmith plugin that provides url redirections where headers cannot be modified",
   "author": "Johan Nordberg <code@johan-nordberg.com>",
   "license": "MIT",
