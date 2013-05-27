@@ -14,12 +14,11 @@ suite.addBatch
       'loaded ok': (result) ->
         assert.instanceOf result.contents, wintersmith.ContentTree
       'has plugin instances': (result) ->
-        assert.instanceOf result.contents['hello.txt'], wintersmith.ContentPlugin
-        assert.isArray result.contents._.text
-        assert.lengthOf result.contents._.text, 2
-      'contains the right text': (result) ->
-        for item in result.contents._.text
-          assert.isString item.text
-          assert.match item.text, /^Wintersmith is awesome!\n/
+        assert.instanceOf result.contents.redirects['test.html'], wintersmith.ContentPlugin
+        assert.isArray result.contents.redirects._.redirects
+        assert.lengthOf result.contents.redirects._.redirects, 2
+      'has redirection script': (result) ->
+        for item in result.contents.redirects._.redirects
+          assert.match item.response.toString(), /window.location.href =/
 
 suite.export module

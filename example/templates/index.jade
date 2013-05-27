@@ -1,9 +1,9 @@
 
-h1 The text archives
+h1 Redirects
 
-for item in contents._.text
-  a(href=item.url)= item.filename
-  pre= item.text
-  hr
+for item in contents.redirects
+  a(href=item.url)
+    | #{ item.from } -> #{ item.to }
+  br
 
 p: em Cheerio

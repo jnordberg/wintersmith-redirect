@@ -1,12 +1,13 @@
 {
-  "name": "wintersmith-plugin",
-  "version": "1.0.0",
-  "description": "A wintersmith plugin.",
-  "author": "Anonymous",
+  "name": "wintersmith-redirect",
+  "version": "0.1.0",
+  "description": "Wintersmith plugin that provides url redirections where headers cannot be modified",
+  "author": "Johan Nordberg <code@johan-nordberg.com>",
   "license": "MIT",
   "keywords": [
     "wintersmith",
-    "wintersmith-plugin"
+    "wintersmith-plugin",
+    "redirect"
   ],
   "main": "lib/",
   "dependencies": {

@@ -1,5 +1,9 @@
 {
   "plugins": [
     "./../index-dev.js"
-  ]
+  ],
+  "redirects": {
+    "test.html": "redirected.html",
+    "some/deep/path/should/also/work/index.html": "http://google.se"
+  }
 }
